@@ -1,0 +1,12 @@
+.notice {
+  text-align: center;
+  color: #666;
+}
+
+.notice-icon {
+  font-size: 2rem;
+}
+
+.notice p {
+  line-height: 1.5;
+}

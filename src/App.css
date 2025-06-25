@@ -1,0 +1,101 @@
+/* アプリ全体のスタイル */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ページ全体でのドラッグオーバー時の表示 */
+.app.global-drag-over::before {
+  content: '📁 ファイルをドロップしてください';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 152, 219, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 400px;
+}
+
+.title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* 初期画面のスタイル */
+.initial-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ファイル表示コンテナのスタイル */
+.file-display-container {
+  animation: fadeIn 0.5s ease;
+}
+
+/* 2カラムレイアウト */
+.file-content {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.file-content > * {
+  flex: 1;
+  min-width: 0;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .file-content {
+    flex-direction: column;
+  }
+}

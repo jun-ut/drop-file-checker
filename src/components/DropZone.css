@@ -1,0 +1,64 @@
+.drop-zone {
+  border: 3px dashed #bdc3c7;
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fafbfc;
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+  border-color: #3498db;
+  background-color: #f0f8ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.drop-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.drop-icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.drop-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+.drop-text small {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.divider {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.file-input-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.file-input-button:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
